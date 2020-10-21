@@ -10,8 +10,8 @@ spring:
           uri: https://github.com/150481a/springcloud.git
           search-paths:
             - springcloud-config
-      label: master
+          default-label: main
 eureka:
   client:
     service-url:
-      defaultZone:  http://localhost:7001/eureka
+      defaultZone:  http://eureka7001.com:7001/eureka/
