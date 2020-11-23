@@ -1,6 +1,5 @@
 package com.xiaojun.springcloud.controller;
 
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,27 +10,23 @@ import org.springframework.web.bind.annotation.RestController;
  * @title: ConfigClientController
  * @projectName springcloud
  * @description: TODO
- * @date 2020/10/2123:24
+ * @date 2020/11/239:39
  * `
  */
-@RefreshScope
 @RestController
-@Slf4j
+@RefreshScope
 public class ConfigClientController {
+
     @Value("${server.port}")
     private String serverPort;
 
     @Value("${config.info}")
     private String configInfo;
 
+
     @GetMapping("/configInfo")
     public String getConfigInfo(){
-        return configInfo;
-    }
-
-    @GetMapping("/serverPort")
-    public String getServerPort(){
-        return serverPort;
+        return "serverPort:"+serverPort+"\t\n\n configInfo: "+configInfo;
     }
 
 }

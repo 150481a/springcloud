@@ -1,14 +1,15 @@
 server:
-  port: 3355
+  port: 3366
+
 spring:
   application:
     name: config-client
   cloud:
     config:
-      label: main
+      label: master
       name: config
       profile: dev
-      uri: http://config-3344.com:3344
+      uri: http://localhost:3344
   rabbitmq:
     host: localhost
     port: 5672
@@ -19,7 +20,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://eureka7001.com:7001/eureka
-
 management:
   endpoints:
     web:
