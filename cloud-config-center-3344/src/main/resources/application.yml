@@ -7,10 +7,12 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/150481a/springcloud.git
+          uri: https://github.com/150481a/springCloud-config.git #github上仓库地址
           search-paths:
-            - springcloud-config
-          default-label: main
+            # 搜索目录
+            - springcoud-config
+      #读取分支
+      label: release
   rabbitmq:
     host: localhost
     port: 5672

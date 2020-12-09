@@ -1,4 +1,0 @@
-server:
-  port: 3349
-config:
-  info: "main branch,springcloud-config/config-test.yml version=5"
